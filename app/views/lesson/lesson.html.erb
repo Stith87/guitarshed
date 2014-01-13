@@ -1,0 +1,103 @@
+
+<div class="container lesson_container">
+	<div id="buttons" class="row">
+
+    
+     
+      
+       
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <table>
+              <tr>
+                <td><label for="keyword">Keyword</label></td>
+              </tr>
+              <tr>
+                <td> <input id="keyword" value='' type="text"/></td>
+              </tr>
+            </table>
+          </div>
+    
+        
+            <div class="col-xs-12 col-sm-3 col-md-3">
+              <table>
+                <tr>
+              	 <td><label for="skill">Skill Level</label></td>
+                </tr>
+                <tr>
+                	<td><select name="skill" id="skill">
+                		<option value=""></option>
+                		<option value="beginner">Beginner</option>
+                		<option value="intermediate">Intermediate</option>
+                		<option value="advanced">Advanced</option>
+                	</select></td>
+                </tr>
+              </table>
+          </div>
+        
+
+       
+          <div class="col-xs-12 col-sm-3 col-md-3"> 
+            <table>   
+              <tr>  	
+        		    <td><label for="lessonType">Categories</label></td>
+              </tr>
+              <tr>
+              	<td><select name="lessonType" id="lessonType">
+              		<option value=""></option>
+              		<option value="chords">Chords</option>
+              		<option value="scales">Scales</option>
+              		<option value="arpeggios">Arpeggios</option>
+              		<option value="intermediate">Music Theory</option>
+               	</select></td>
+              </tr>
+            </table>
+          </div>
+        
+
+        
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <table>
+              <tr>
+              	<td><label for="technique">Technique</label></td>
+              </tr>
+              <tr>	
+                <td><select name="technique" id="technique">
+              		<option value=""></option>
+              		<option value="legato">Legato</option>
+              		<option value="strumming">Strumming</option>
+              		<option value="tapping">Tapping</option>
+              		<option value="bending">Bending</option>
+              		<option value="vibrato">Vibrato</option>
+              		<option value="whammy">Whammy Bar</option>
+              	</select></td>
+              </tr>
+            </table>
+          </div>
+
+         <div style="width: 200px; margin: 0 auto;">
+            <button id="search-button" class="btn-sm btn-primary" disabled onclick="search()">Search</button>
+        </div>
+    
+  </div>
+ 
+  <div class="row" id="searchContainer">	
+  </div>
+  
+  
+    <script>
+    	 // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+
+  
+   	</script>
+  
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
+

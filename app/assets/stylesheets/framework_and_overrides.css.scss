@@ -1,0 +1,90 @@
+// import the CSS framework
+@import "bootstrap";
+
+// make all images responsive by default
+
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+
+body{
+  background-color: #222;
+}
+
+  
+// override for the 'Home' navigation link
+.navbar{
+  padding: 5px;
+  height: 55px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px){
+  .navbar-collapse{
+    background-color: #222;
+  }
+}
+
+
+.logo{
+ 
+  max-width: 325px;
+}
+  
+ .container-full {
+
+  margin-left:-20px;
+  margin-right: -20px;
+  width: 100%;
+  background-color: #000;
+ 
+
+}
+
+.splash {
+  
+  height: 350px;
+  background-image:url('/assets/slide-3.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+
+}
+
+
+
+
+
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 55px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
