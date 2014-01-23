@@ -13,9 +13,17 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+    <div class="container-full">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <main role="main">
+          
+         <%= render 'layouts/messages' %>
+         <%= yield %>
+         <%= render 'layouts/footer' %>
+      </main>
+    </div>
+
+
   </body>
 </html>

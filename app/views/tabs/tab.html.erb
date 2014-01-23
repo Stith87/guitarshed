@@ -1,0 +1,27 @@
+
+    <div class="container">       
+       <div class="row">
+          <div class="tab-search col-md-12 col-sm-12 col-xs-12">
+            <%= render 'form' %> 
+          </div>
+          <table class="tabs col-md-12 col-sm-12 col-xs-12"> 
+            
+            <% if (defined?(@tabs)).nil? %>
+
+            <% else %>
+              <% @tabs.each do |tab| %>
+
+
+                <tr class="tabs">
+                <td><%= tab.artist %></td>
+                <td><%= tab.title %></td>
+                <td><a href="https://s3-us-west-2.amazonaws.com/guitarsheduploads/<%= tab.url %>">Download</a></td>
+                </tr>
+
+
+              <% end %>
+            <% end %>
+          </table>
+        </div>
+		
+	  </div>

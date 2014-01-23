@@ -1,0 +1,5 @@
+<%= form_tag("/tab", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q,nil, :required => true) %>
+  <%= submit_tag("Search", class: "btn btn-default") %>
+<% end %>

@@ -1,0 +1,38 @@
+    <div class="container">       
+       <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 form-container">
+            <%= render 'form' %> 
+          </div>
+      </div>
+      <div class="row">
+          <div id="track-player" class="col-md-12 col-sm-12 col-xs-12">
+
+          </div>
+
+          <table class="col-md-12 col-sm-12 col-xs-12 track-list"> 
+             
+            <% if (defined?(@tracks)).nil? %>
+
+            <% else %>
+              <% @tracks.each do |track| %>
+
+
+                <tr>
+                <td><%= track.artist %></td>
+                <td><%= track.title %></td>
+                <td><span class="play" onclick="tsearch('<%= track.url%>','<%= track.artist %>','<%= track.title %>')">Play</span></td>
+                </tr>
+
+
+              <% end %>
+            <% end %>
+          </table>
+        </div>
+		  </div>
+	  
+
+<script>
+
+
+
+</script>

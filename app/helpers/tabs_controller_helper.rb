@@ -1,0 +1,2 @@
+module TabsControllerHelper
+end

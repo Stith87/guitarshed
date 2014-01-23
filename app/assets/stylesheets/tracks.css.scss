@@ -1,0 +1,37 @@
+// Place all the styles related to the tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-container{
+	margin: 0 auto;
+}
+#track-player{
+	height: auto;
+	margin: 0 auto;
+    text-align: center;
+	
+}
+
+.track-container{
+
+	border: 1px solid #fefefe;
+	z-index: 9999; 
+	background-color: #111;
+}
+
+#track-player audio{
+	padding-top: 25px;
+	margin: 0 auto;
+}
+
+.track-list tr:hover td{
+	background-color: #000;
+}
+
+.play{
+	cursor: pointer;
+}
+
+.play:hover {
+	color: #d07f00;
+}

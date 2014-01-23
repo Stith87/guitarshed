@@ -5,7 +5,7 @@ function handleAPILoaded() {
 
 // Search for a given string.
 function search() {
-  var q = "guitar" + $('#keyword').val() + " " +  $('#skill').val() + " " + $('#lessonType').val() + " " + $('#technique').val() + " " + "lesson" ;
+  var q = "guitar " + $('#keyword').val() + " " +  $('#skill').val() + " " + $('#lessonType').val() + " " + $('#technique').val() + " " + "lesson" ;
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet',
@@ -42,11 +42,10 @@ function search() {
     }
 
 
-
     function showDetails(resultTitle, resultImg, divId, videoId, desc){
 
-      $('#searchContainer').append('<div id="' + divId + '" " class="lesson col-xs-12 col-sm-12 col-md-12" style="cursor: pointer"></div>');
-      $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-polaroid img-responsive'></div><div class='details' ><h4>" + resultTitle + "</h4><p>" + desc + "</p></div></div>");
+      $('#searchContainer').append('<div id="' + divId + '" " class="lesson col-xs-12 col-sm-6 col-md-4" style="cursor: pointer"></div>');
+      $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-circle img-responsive'></div><div class='details' ><h4>" + resultTitle + "</h4></div></div>");
       $('#' + divId).after('<div class="videoContainer_' + videoId +'  video col-xs-12 col-sm-12 col-md-12"></div>'); 
       $('.videoContainer_' + videoId +'').hide();  
       
@@ -73,29 +72,47 @@ function search() {
 
     $('#' + divId).clicktoggle(function(){
           
-          $('.videoContainer_' + videoId +'').slideDown('fast', function(){
-            playResults(videoId, divId);
+          $('.videoContainer_' + videoId +'').fadeIn('800', function(){
+            $('.videoContainer_' + videoId +'').animate({
+              height: "+=350px"
+              
+              
+
+              
+            }, "fast", "swing", function(){
+              playResults(videoId, divId);
+            } );
+            
             
           });
                     
         }, function(){
          
-           $('.videoContainer_' + videoId +'').slideUp('slow',function(){
+           $('.videoContainer_' + videoId +'').fadeOut('400',function(){
               $('.videoContainer_' + videoId +'').html('');
            });
 
+
+          var container = $(".videoContainer_" + videoId +"");
+
+ 
+
         });
+
+   
 
         
     $('#' + divId).mouseenter(function(){
       $(this).fadeTo("fast", 1.00);
-      $(this).css({ boxShadow: '0px 5px 6px #444' })
+      $(this).css({ boxShadow: '0px 0px 3px #c67332' })
     })    
     
     $('#' + divId).mouseleave(function(){
-      $(this).fadeTo("fast", .8);
-      $(this).css({ boxShadow: '0px 0px 0px #444' })
+      $(this).fadeTo("fast", .5);
+      $(this).css({ boxShadow: '' })
     }) 
+
+
 
     
   }
@@ -105,9 +122,30 @@ function search() {
 
   function playResults(videoId, videoDiv){
 
-    $('.videoContainer_' + videoId +'').append('<center><iframe id="ytplayer" type="text/html" width="640" height="360" style="max-width: 100%;" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center>');
-      
+    $('.videoContainer_' + videoId +'').append('<div class="player-container"><span class="close">X</span><center><iframe id="ytplayer" type="text/html" width="640" height="360" style="max-width: 100%;" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center></div>');
+        
+    $('.close').click(function(){
+      $('.video').fadeOut('fast',function(){
+        $('.player-container').html("");
+      });
+     
+    }); 
+  }
 
+
+
+$(document).mouseup(function (e)
+{
+    var container = $(".video");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+      container.fadeOut('slow',function(){
+        container.html('');
+        container.hide();
+      })  
+       
     }
-
+});
 

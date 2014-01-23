@@ -33,6 +33,8 @@ group :doc do
 end
 
 gem 'bootstrap-sass'
+gem 'devise'
+gem 'mysql2'
 
 group :development do
   gem 'rails_layout'

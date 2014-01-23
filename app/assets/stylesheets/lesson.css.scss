@@ -1,3 +1,69 @@
 // Place all the styles related to the lesson controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#searchContainer{
+	background-color: #222;
+	padding-top: 150px;
+	width: 100%;
+}
+
+#buttons{
+	background-color: #333;
+	
+	z-index: 99;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #111;
+	position: fixed;
+	box-shadow: 0px 2px #111;
+	width: 100%;
+}
+
+#buttons h4{
+	font-size: 1em;
+}
+
+.lesson{
+	height: 250px;
+	padding: 5px;
+	margin-top: 10px;
+	text-align: center;
+	opacity: .5;
+}
+
+.video{
+	background-color: rgba(0,0,0,.9);
+	position:fixed;
+	top: 75;
+	padding: 25px;
+	z-index: 100;  
+	
+	margin: 0 auto;  
+	
+	
+	
+	
+}
+
+.video-container{
+	width: 500px;
+
+}
+
+.close{
+	height: 20px;
+	width: 25px;
+	position: relative;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	text-align: center;
+	padding: 5px;
+	font-size: 12px;
+
+}
+
+
+.category{
+
+}
+
