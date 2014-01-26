@@ -32,9 +32,10 @@
 }
 
 .video{
-	background-color: rgba(0,0,0,.9);
+	background-color: rgba(0,0,0,1);
 	position:fixed;
-	top: 75;
+    
+	bottom: 0;
 	padding: 25px;
 	z-index: 100;  
 	
