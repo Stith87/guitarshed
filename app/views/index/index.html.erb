@@ -3,7 +3,7 @@
 		<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 caption">
 			<h1>Learn. Practice. Perform.</h1>
 			<hr></hr>
-			<h4>Lessons - Tabs - Backing Tracks</h4> 
+			<h4><%= link_to "Lessons", lesson_path %> - <%= link_to "Tabs", tab_path %> - <%= link_to "Backing Tracks", tracks_path %></h4> 
 		</div>
 	</div>
 </div>
@@ -12,21 +12,21 @@
 	<div class="col-xs-12 col-sm-6 col-md-4 third" id="lesson-1">
 		
 		
-		<h3>Lessons</h3>
+		<h3><%= link_to "Lessons", lesson_path %></h3>
 		<hr />
 		<%= image_tag "lessons-1.jpg", :class=> "third-img img-responsive img-circle" %>
 		<p>Learn to strum chords, develop rhythm, shred scales, memorizing modes, and more with our extensive lesson collection.</p>
 	</div>
 
 	<div class="col-xs-12 col-sm-6 col-md-4 third">
-		<h3>Guitar Pro Tabs</h3>
+		<h3><%= link_to "Guitar Pro Tabs", tab_path %></h3>
 		<hr />
 		<%= image_tag "guitarpro-1.jpg", :class => "third-img img-responsive img-circle" %>
 		<p>Learn over 70,000 your favorite songs with our huge collection of Guitar Pro tablature and sheet music!</P>
 	</div>
 
 	<div class="col-xs-12 col-sm-6 col-md-4 third">
-		<h3>Backing Tracks</h3>
+		<h3><%= link_to "Backing Tracks", tracks_path %></h3>
 		<hr />
 		<%= image_tag "backingtracks-1.jpg", :class=> "third-img img-responsive img-circle" %>
 		<p>Rehearse and practice what you have learned with our massive database of high quality backing tracks.</p>

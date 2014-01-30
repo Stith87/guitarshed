@@ -2,11 +2,11 @@ class TabsController < ApplicationController
 	 
 	def tab
 		
-		@query = params[:q] 
-		@qtype = params[:qtype]
-
 		if(params.has_key?(:q))
-	 		@tabs = Tab.find_by_sql("Select * from gp where #{@qtype} like '%#{@query}%' ORDER BY artist, title")
+			@query =  ActiveRecord::Base.connection.quote("%" + params[:q] + "%")
+			@qtype =  params[:qtype]
+
+	 		@tabs = Tab.find_by_sql("Select * from gp where #{@qtype} like #{@query} ORDER BY artist, title")
 	 		
 		end
 
