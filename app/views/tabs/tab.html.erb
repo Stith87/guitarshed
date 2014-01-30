@@ -1,9 +1,9 @@
 
-    <div class="container">       
-       <div class="row">
-          <div class="tab-search col-md-12 col-sm-12 col-xs-12">
-            <%= render 'form' %> 
-          </div>
+    <div class="container-full">       
+       <div class="row tab-search">
+          <%= render 'form' %> 
+       </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <table class="tabs col-md-12 col-sm-12 col-xs-12"> 
             
             <% if (defined?(@tabs)).nil? %>
@@ -11,7 +11,7 @@
             <% else %>
               <% @tabs.each do |tab| %>
 
-
+               
                 <tr class="tabs">
                 <td><%= tab.artist %></td>
                 <td><%= tab.title %></td>

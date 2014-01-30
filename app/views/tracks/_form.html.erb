@@ -1,5 +1,8 @@
-<%= form_tag("/tracks", method: "get") do %>
-  <%= label_tag(:t, "Search for:") %>
-  <%= text_field_tag(:t,nil, :required => true) %>
-  <%= submit_tag("Search", class: "btn btn-default") %>
-<% end %>
+<div class="col-md-12 col-sm-12 col-xs-12 track-form">
+	<h4> Play along to your favorite songs with our vast selection of full-band backing tracks!</h4>
+	<%= form_tag("/tracks", method: "get") do %>
+	  <%= label_tag(:t, "Search for:") %>
+	  <%= text_field_tag(:t,nil, :required => true) %>
+	  <%= submit_tag("Search", class: "btn btn-default") %>
+	<% end %>
+</div>

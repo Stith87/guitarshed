@@ -1,10 +1,5 @@
-// Once the api loads call enable the search box.
-function handleAPILoaded() {
-  $('#search-button').attr('disabled', false);
-}
 
-// Search for a given string.
-function search() {
+});
   var q = "guitar " + $('#keyword').val() + " " +  $('#skill').val() + " " + $('#lessonType').val() + " " + $('#technique').val() + " " + "lesson" ;
   var request = gapi.client.youtube.search.list({
     q: q,

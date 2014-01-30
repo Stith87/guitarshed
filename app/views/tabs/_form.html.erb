@@ -1,5 +1,12 @@
-<%= form_tag("/tab", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q,nil, :required => true) %>
-  <%= submit_tag("Search", class: "btn btn-default") %>
-<% end %>
+<div class="col-md-12 col-sm-12 col-xs-12 tab-form">
+<h4> Search our vast collection of <a href="#">Guitar Pro</a> tabs and learn your favorite songs with the best tablature software out there.</h4>
+	<%= form_tag("/tab", method: "get") do %>
+	  <%= label_tag(:q, "Search for:") %>
+	  <%= text_field_tag(:q,nil, :required => true) %>
+	  <%= label_tag(:qtype, "in") %>
+	  <%= select_tag(:qtype,  options_for_select([['Songs', 'title'], ['Artist', 'artist']]))  %>
+
+	  <%= submit_tag("Search", class: "btn btn-default") %>
+	<% end %>
+
+</div>

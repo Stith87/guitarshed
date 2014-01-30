@@ -6,4 +6,5 @@ class Tab < ActiveRecord::Base
   self.table_name = 'gp'
 
   has_many :queries
+ 
 end
