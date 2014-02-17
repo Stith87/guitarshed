@@ -1,0 +1,9 @@
+<% @cms_page.root.children.published.each do |page| %>
+  <% if page.label=="Chords" %>
+  	 <%= link_to page.label, page.url %>
+  	 <hr />
+  	<% page.children.published.each do |child| %>
+  		 <h3><%= link_to child.label, child.url %></h3>
+  	<% end %>
+  <% end %>
+<% end %>

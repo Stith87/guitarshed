@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'comfortable_mexican_sofa', '~> 1.11.0'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'mysql2'

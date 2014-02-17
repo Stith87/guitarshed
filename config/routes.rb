@@ -1,4 +1,5 @@
 Guitarshed::Application.routes.draw do
+
   devise_for :users
   resources :users
 
@@ -6,7 +7,7 @@ Guitarshed::Application.routes.draw do
 
   root :to => 'index#index'
 
-  get "lesson" => "lesson#lesson"
+  get "videoLesson" => "lesson#lesson"
 
   get "tab" => "tabs#tab"
   get "tracks" => "tracks#tracks"
@@ -65,4 +66,10 @@ Guitarshed::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+    comfy_route :cms_admin, :path => '/admin'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
+
 end

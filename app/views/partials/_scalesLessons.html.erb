@@ -1,0 +1,9 @@
+<% @cms_page.root.children.published.each do |page| %>
+  <% if page.label=="Scales" %>
+  	<%= link_to page.label, page.url %>
+  	<hr />
+  	<% page.children.published.each do |child| %>
+  		 <h4><%= link_to child.label, child.url %></h4>
+  	<% end %> 
+  <% end %>
+<% end %>
