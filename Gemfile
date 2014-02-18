@@ -34,7 +34,7 @@ end
 
 gem 'comfortable_mexican_sofa', '~> 1.11.0'
 gem 'bootstrap-sass'
-#gem 'mysql2'
+gem 'mysql2'
 gem 'tinymce-rails'
 
 
