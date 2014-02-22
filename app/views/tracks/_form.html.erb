@@ -3,6 +3,8 @@
 	<%= form_tag("/tracks", method: "get") do %>
 	  <%= label_tag(:t, "Search for:") %>
 	  <%= text_field_tag(:t,nil, :required => true) %>
+	  <%= label_tag(:ttype, "in") %>
+	  <%= select_tag(:ttype,  options_for_select([['Songs', 'title'], ['Artist', 'artist']]))  %>
 	  <%= submit_tag("Search", class: "btn btn-default") %>
 	<% end %>
 </div>

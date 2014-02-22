@@ -24,7 +24,6 @@
 
 .track-container{
 
-	border: 1px solid #fefefe;
 	z-index: 9999; 
 	background-color: #111;
 }
@@ -53,4 +52,19 @@ table.track-list tr:hover td{
 
 .play:hover {
 	color: #d07f00;
+}
+
+.modal-content{
+	background-color: #111;
+	height: 250px;
+	border: 1px solid #fefefe;
+}
+
+.modal-header{
+	border-bottom: none;
+}
+
+.download{
+	width: 150px;
+	margin: 0 auto;
 }

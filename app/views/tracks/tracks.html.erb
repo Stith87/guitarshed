@@ -5,8 +5,20 @@
           </div>
       </div>
       <div class="row">
-          <div id="track-player" class="col-md-12 col-sm-12 col-xs-12">
-
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class='close' data-dismiss='modal' onclick='close()'>X</span>
+                </div>
+                  
+                
+                <div id="track-player" class="modal-body">
+                  
+                </div>
+              </div>
+              
+            </div>
           </div>
 
           <table class="col-md-12 col-sm-12 col-xs-12 track-list"> 
@@ -20,7 +32,7 @@
                 <tr>
                 <td><%= track.artist %></td>
                 <td><%= track.title %></td>
-                <td><span class="play" onclick="tsearch('<%= track.url%>','<%= track.artist %>','<%= track.title %>')">Play</span></td>
+                <td><span class="play" data-toggle="modal" data-target="#myModal" onclick="tsearch('<%= track.url%>','<%= track.artist %>','<%= track.title %>')">Play</span></td>
                 </tr>
 
 
