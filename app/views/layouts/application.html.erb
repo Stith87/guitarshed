@@ -3,12 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <meta name="keywords" content="<% if defined?(cms_page_content(:keyworks)) %><%= cms_page_content(:meta_keywords) %><% else %><%= meta_keywords %>" /> 
+    <meta name="keywords" content="<% if defined?(cms_page_content(:keyworks)) %><%= cms_page_content(:meta_keywords) %><% else %><%= meta_keywords %>
+    " /> 
     <% end %>
 
     <meta name="description" content="<% if defined?(cms_page_content(:meta_description)) %><%= cms_page_content(:meta_description) %><% else %><%= meta_description %>
-    <% end %>">
-    <meta name="description" content="" />
+    <% end %>
+    "/>
+  
     <%= stylesheet_link_tag "application", media: "all" %>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application", media: "all", "data-turbolinks-track" => true %>
