@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Guitarshed" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Guitarshed" %>">
+    <title><%= title %></title>
+    <meta name="keywords" content="<% if defined?(cms_page_content(:keyworks)) %><%= cms_page_content(:meta_keywords) %><% else %><%= meta_keywords %>" /> 
+    <% end %>
+
+    <meta name="description" content="<% if defined?(cms_page_content(:meta_description)) %><%= cms_page_content(:meta_description) %><% else %><%= meta_description %>
+    <% end %>">
+    <meta name="description" content="" />
     <%= stylesheet_link_tag "application", media: "all" %>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
